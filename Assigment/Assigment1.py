@@ -1,43 +1,57 @@
-print('********************job application form***********************')
-# str
-name=str(input("enter the Name:" ))
-address=str(input("enter the address:"))
-mobile_number =str(input('enter your mobile number:'))
-Email_id=str(input('enter your Email id:'))
-branch=str(input('enter your Branch name: '))
-#int
-passing_year=int(input('enter the year of passing year:'))
-#str
-collage_name=str(input('enter the college name:'))
-#float
-graduation_cgpa=float(input('enter your cgpa:'))
-inter_percentage=float(input('enter your inter percentage:'))
-ssc_percentage=float(input('enter your ssc percentage:'))
-#set
-skills=set(input('enter your skills:').split(','))
-#str
-Experience=str(input('enter your experience if any else write no experience:'))
-projects=str(input('enter your project details:'))
+print("="*25, "WELCOME TO NAUKRI", "="*25)
 
+name = input("Enter your name: ").strip()
+address = input("Enter your address: ").strip()
+mobile_number = input("Enter your mobile number: ").strip()
+email_id = input("Enter your email id: ").strip()
 
-print("******************your details are as follows***********************")
+qualification = input(
+    "Enter your highest qualification (10th/Diploma/Intermediate/BTech/PhD): "
+).strip()
 
+branch = input("Enter your branch name: ").strip()
+passing_year = int(input("Enter your passing year: "))
+college_name = input("Enter your college name: ").strip()
 
-print('name :',name)
+graduation_cgpa = float(input("Enter your graduation CGPA: "))
+inter_percentage = float(input("Enter your inter percentage: "))
+ssc_percentage = float(input("Enter your SSC percentage: "))
 
-print('address:',address)
-print('mobile number:',mobile_number)
-print('Email id:',Email_id)
-print('branch:',branch)
-print('passing year:',passing_year)
-print('collage name:',collage_name)
-print('graduation cgpa:',graduation_cgpa)
-print('inter percentage:',inter_percentage)
-print('ssc percentage:',ssc_percentage)
-print('skills:',skills)
-print('Experience:',Experience)
-print('projects:',projects)
-    
+skills = set(map(str.strip, input(
+    "Enter your skills (comma separated): "
+).split(",")))
 
+experience = input(
+    "Enter your experience (or type 'No Experience'): "
+).strip()
+
+projects = input("Enter your project details: ").strip()
+
+preferred_roles = tuple(map(str.strip, input(
+    "Enter your preferred roles (comma separated): "
+).split(",")))
+
+preferred_locations = list(map(str.strip, input(
+    "Enter your preferred locations (comma separated): "
+).split(",")))
+
+print("\n", "="*20, "YOUR DETAILS", "="*20)
+
+print("Name               :", name)
+print("Address            :", address)
+print("Mobile Number      :", mobile_number)
+print("Email ID           :", email_id)
+print("Qualification      :", qualification)
+print("Branch             :", branch)
+print("Passing Year       :", passing_year)
+print("College Name       :", college_name)
+print("Graduation CGPA    :", graduation_cgpa)
+print("Inter Percentage   :", inter_percentage)
+print("SSC Percentage     :", ssc_percentage)
+print("Skills             :", ", ".join(skills))
+print("Experience         :", experience)
+print("Projects           :", projects)
+print("Preferred Roles    :", ", ".join(preferred_roles))
+print("Preferred Location :", ", ".join(preferred_locations))
 
 
